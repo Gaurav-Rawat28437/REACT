@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            background-color: gray;
+        }
+        #nav{
+            display: flex;
+            
+            gap: 80%;
+            align-items: center;
+            padding: 10px;
+            background-color: black;
+            color: aliceblue;
+        }
+        
+        #logo{
+               background-color: black;
+        }
+
+        #rightContainer{
+            display: flex;
+            gap: 50px;
+            background-color: black;
+
+        }
+
+       .link{
+        text-decoration: none;
+        color: blue;
+        background-color: black;
+
+        }
+        
+    </style>
+</head>
+<body>
+    
+    
+
+    <nav id="nav"></nav>
+
+
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+
+        const nav=ReactDOM.createRoot(document.getElementById("nav"))
+        const logo=React.createElement("h3",{id:"logo"},"LOGO")
+        const rightContainer=React.createElement("div",{id:"rightContainer"},[React.createElement("a",{class:"link"},"A"),React.createElement("a",{class:"link"},"B"),React.createElement("a",{class:"link"},"C")])
+
+        nav.render([logo,rightContainer])
+    </script>
+</body>
+</html>

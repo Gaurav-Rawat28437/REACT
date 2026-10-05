@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>REACT</h1>
+
+    <ul>
+        <li>React is a JavaScript library used to build website user interfaces (UI).</li>
+        <li>Used to create web app front-end.</li>
+        <li>Works with components (small reusable parts).</li>
+    </ul>
+
+
+    <div id="root"></div>
+
+
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+
+        // how to creat Element
+
+        const root=ReactDOM.createRoot(document.getElementById("root"))
+        const myheading=React.createElement("h1",null,"hello world")
+        const mylist=React.createElement("ul",null,[React.createElement("li",null,"A"),React.createElement("li",null,"B")])
+
+        root.render([myheading,mylist])
+    </script>
+</body>
+</html>
